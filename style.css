@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+
+
+}
+
+.body{
+    margin: auto;
+    width: 600px;
+    height: 500px; 
+  
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.126);
+}
+
+.content {
+    margin: auto;
+    margin-top: 20px;
+    width: 208px;
+    height: 450px;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right, white, rgb(222, 218, 218));
+    z-index: -1;
+ 
+  
+  
+}
+
+.top {
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.ikon {
+    height: 75px;
+    margin-top: 5px;
+
+}
+
+img {
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+}
+
+.sun {
+    margin-left: 75px;
+    border-radius: 150px;
+}
+
+.moon {
+    border-radius: 150px;
+}
+
+.past {
+    margin-left: 40px;
+}
+
+table {
+    margin: auto;
+    border-spacing: 10px;
+    text-align: center;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom right, #8dbad0, #bcd4f3);
+
+
+}
+
+tr td {
+    width: 40px;
+    height: 40px;
+    border-radius: 150px;
+    background-color: #4bb6e12d;
+
+}
+
+
+.ac,
+.artiEksi,
+.yuzde {
+
+    float: left;
+    margin: 12px;
+    padding-left: 1px;
+}
+
+.dikey {
+    vertical-align: top;
+    padding-bottom: 15px;
+
+
+}
+
+.dikey2 {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+
+.line {
+    border-radius: 0px;
+    border: none;
+    border-top:3px solid rgba(0, 0, 255, 0.305);
+    width: 55px;
+    height: 3px;
+}
+
+.none {
+    border: none;
+    width: 2px;
+    height: 2px;
+}
+
+.digitalDisplay {
+    height: 40px;
+
+}
+
+.sonuc {
+ 
+    height: 20px;
+    position: relative;
+    bottom: 35px;
+
+}
+
+.btnCal{
+    cursor: pointer;
+}
+
+.insideHistory{
+    margin: 20px;
+
+
+}
+
+.history{
+    border: 1px solid blue;
+    border-radius: 15px;
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.history1{
+
+   display: hidden;
+   
+}
+
+.history2{
+
+   display: none;
+}
+
+
+
+
+

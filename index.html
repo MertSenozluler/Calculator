@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" class="style1" href="style.css">
+</head>
+
+<body>
+<div class="body">
+    <div class="content">
+        <div class="top">
+            <div class="ikon">
+                <img class="sun" src="sunBlack.png" alt="sun" style="cursor: pointer;" >
+                <img class="moon" src="moonBlack.png" alt="moon" style="cursor: pointer;">
+                <img class="past" src="pastBlack.png" alt="past" style="cursor: pointer;">
+            </div> <br>
+            <div class="digitalDisplay" style="margin-right: 15px;"></div> <br> 
+            <div class="sonuc">
+                <p style="float: left; margin-left: 15px;">=</p> 
+                <p style="float: right; margin-right: 15px;" class="resultDisplay"></p>
+            </div>
+        </div>
+        <table>
+                <tr>
+                    <td colspan="3" class="yatay">
+                        <p class="ac btnCal">AC</p>
+                        <p class="artiEksi btnCal">+/-</p>
+                        <p class="yuzde btnCal">%</p>
+                    </td>
+                    <td rowspan="5" class="dikey">
+                        <div class="dikey2">
+                        <p class="bolme btnCal">/</p>
+                        <p class="carpma btnCal">*</p>
+                        <p class="eksi btnCal">-</p>
+                        <p class="arti btnCal">+</p>
+                        <p class="esittir btnCal">=</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="btnCal">1</td>
+                    <td class="btnCal">2</td>
+                    <td class="btnCal">3</td>
+                </tr>
+                <tr>
+                    <td class="btnCal">4</td>
+                    <td class="btnCal">5</td>
+                    <td class="btnCal">6</td>
+                </tr>
+                <tr>
+                    <td class="btnCal">7</td>
+                    <td class="btnCal">8</td>
+                    <td class="btnCal">9</td>
+
+                </tr>
+                <tr>
+                    <td class="btnCal">.</td>
+                    <td class="btnCal">0</td>
+                    <td class="btnCal">00</td>
+                </tr>
+                <tr>
+                    <td class="none" style="background-color:transparent;"></td>
+                    <td colspan="2" class="line"></td>
+                    <td class="none" style="background-color:transparent;"></td>
+                </tr>
+           
+               
+        </table>
+
+        
+    </div>
+    
+    <div class="history history1 history2">
+        <p class="insideHistory" id="displayer">  </p>
+    </div>
+
+</div>
+
+
+
+
+<script src="jquery.js"></script>
+<script src="index.js"></script>
+</body>
+
+</html>
