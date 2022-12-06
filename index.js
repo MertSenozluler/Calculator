@@ -1,20 +1,24 @@
 
 const mathArray = [];
 past = []
-
-
+let displayArray;
+let solution = 0
 // MATEMATİKSEL İŞLEMLER
 
 $('.content').on('click', '.btnCal', function(event){
     event.preventDefault();
     const pressedButton = $(this);
+    console.log(pressedButton)
     pressedButton.each(function(){
         const pressedValue = pressedButton.text();
         if (pressedValue == "AC"){
             $('.digitalDisplay .displayArray, .digitalDisplay .solutionHtml').remove();
+            solution = ''
             mathArray.length=0;
             const displayArray = mathArray.join('');
             const displayHtml = '<div class= "displayArray "><h4>' + displayArray + '</h4></div>';
+            const solutionHtml = '<div class="solutionHtml solutionShow" style="float:right"><h4>' + solution + '</h4></div>'; 
+            $('.resultDisplay').text('');
             $('.digitalDisplay').prepend(displayHtml);
          } else if (pressedValue == "+/-") {
             $('.digitalDisplay .displayArray, .digitalDisplay .solutionHtml').remove();
@@ -27,7 +31,7 @@ $('.content').on('click', '.btnCal', function(event){
             const displayArray = mathArray.join('');
             past.push(displayArray)
             //evaluate result
-            const solution = eval(displayArray);
+            solution = eval(displayArray);
                  ($.isNumeric(solution)) 
                     const solutionHtml = '<div class="solutionHtml solutionShow" style="float:right"><h4>' + solution + '</h4></div>'; 
                     $('.resultDisplay').prepend(solutionHtml);
@@ -35,11 +39,26 @@ $('.content').on('click', '.btnCal', function(event){
                 mathArray.length = 0;
         } else {
             //if any other button is pressed:
-            $('.digitalDisplay .displayArray , .digitalDisplay .solutionHtml').remove();
-                mathArray.push(pressedValue); 
-                const displayArray = mathArray.join('');
-                const displayHtml = '<div class= "displayArray" style="float:right"><h4>' + displayArray + '</h4></div>';
-                $('.digitalDisplay').prepend(displayHtml);             
+            console.log(solution)
+           
+             
+             $('.digitalDisplay .displayArray , .digitalDisplay .solutionHtml').remove();
+             if (solution != 0) {
+                if (pressedButton.hasClass('hesap') && mathArray == "") {
+                    mathArray.push(solution)
+                    console.log("a = "+ mathArray)
+                    console.log(solution)
+                }
+                else {
+                    displayArray = mathArray.join('');
+                    console.log('j = ' + displayArray); 
+                }
+            }
+             mathArray.push(pressedValue); 
+             displayArray = mathArray.join('');
+             const displayHtml = '<div class= "displayArray" style="float:right"><h4>' + displayArray + '</h4></div>';
+             $('.digitalDisplay').prepend(displayHtml);  
+             console.log(displayArray) 
        }
     });
 });
